@@ -1,1 +1,1 @@
-<?php header('Location: doc/nnwom.html') ; ?>
+<?php header('Location: docs/nnwom.html') ; ?>
