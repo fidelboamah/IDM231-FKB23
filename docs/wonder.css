@@ -1,0 +1,244 @@
+@font-face{ 
+	font-family: 'Cunia';
+	src:url('/cunia.woff') format('woff'),
+	    url('/cunia.ttf') format('truetype'),
+}
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+/* html, */
+body {
+    /* z-index: -2; */
+    font-family: Cunia;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cunia", sans-serif;
+    font-size: 16px;
+    background-image: url('../img/bg-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* height: 100%; */
+}
+
+h1{
+    margin: 4rem 2rem 1rem 6rem;
+    font-size: 9rem;
+    color: white;
+}
+
+h2{
+    margin: 1rem 2rem 6rem 6rem;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1fr;
+    grid-template-areas: 'one one one two';
+    align-items: center;
+    margin: 4rem 0rem;
+}
+
+div.singas{
+    grid-area: one;
+    display: grid;
+    justify-items: start;
+    grid-gap: 20px 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    margin: 0rem 0rem 0rem 6rem;
+}
+
+img{
+    width: 100%;
+}
+
+/* div.singas img:hover{
+    width: 110%;
+} */
+
+div.click{
+    grid-area: two;
+    align-items: end;
+}
+
+footer{
+    /* padding-left: 6rem; */
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    background-color: black;
+    height: 13%;
+}
+
+footer p{
+    margin: auto;
+}
+div.insta {
+    margin: 3rem 0rem 0rem 6rem;
+    display: inline;
+    align-content: flex-end;
+}
+
+input[type=text] {
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border-radius: 10px;
+
+  }
+
+  div.fill {
+    top:0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.5)
+  }
+
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+    .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 1rem 1.5rem;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 20rem 30rem;
+    grid-template-rows: 5rem 5rem 15rem 5rem;
+    grid-template-areas: 'one two'
+                         'one three'
+                         'one four'
+                         'one five';
+    }
+
+div#image {
+    grid-area: one;
+}
+
+div#image img{
+    width: 80%;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+}
+
+div#title {
+    font-family: Cunia;
+    grid-area: two;
+    font-size: 2rem;
+    padding-top: 3rem;
+    color: white;
+
+}
+div#birthday{
+    color: white;
+    grid-area: three;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+div#description{
+    grid-area: four;
+    font-size: 1rem;
+    color: white;
+    padding-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+div#social{
+    grid-area: five;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    z-index: 10;
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.form {
+    padding: 45px;
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 25px;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .form button:hover,.form button:active,.form button:focus {
+    background: #203520;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+  .form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  .form .register-form {
+    display: none;
+  }
